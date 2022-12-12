@@ -1,5 +1,4 @@
 name: Actions Workflow
-
 on:
  schedule: 
   - cron: '* * * * *'
@@ -9,13 +8,10 @@ on:
     - main
     - test
  jobs:
-  
+  test_schedule:
    run-on: self-hosted
    steps:
-    - name: checkout
-      uses: actions/checkout@v2
     - name: run some simple commands
       run:  
         pwd
         ls -a
-        apt get update
